@@ -32,9 +32,7 @@ export default function PostHeader({ metadata }: { metadata: BlogMetadata }) {
           ))}
         </div>
       </div>
-      <h1 className="mt-6 mb-3 font-semibold text-3xl tracking-tight">
-        {title}
-      </h1>
+      <h1 className="mt-6 mb-3 text-3xl tracking-tight">{title}</h1>
       <p>{description}</p>
       <div className="mt-6 mb-6 flex items-center gap-3 text-muted-foreground text-sm">
         <Tooltip>

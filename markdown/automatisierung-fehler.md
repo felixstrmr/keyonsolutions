@@ -1,5 +1,5 @@
 ---
-title: "Warum die meisten Automatisierungen scheitern - und wie Sie es besser machen"
+title: "Warum die meisten Automatisierungen scheitern - und wie Sie es besser machen können"
 description: "Prozessautomatisierung verspricht Effizienzgewinne und Kosteneinsparungen. Doch warum scheitern so viele Projekte? Wir zeigen die häufigsten Fehler und wie KMUs erfolgreiche Automatisierung umsetzen."
 cover: "/blog/automatisierung-fehler/cover.webp"
 date: "2025-12-30"

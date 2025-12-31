@@ -14,21 +14,21 @@ import { buttonVariants } from "@/components/ui/button";
 export default function Page() {
   return (
     <div className="size-full">
-      <section className="mx-auto max-w-3xl px-3 py-32">
-        <Badge className="mb-8 [&>svg]:size-3" variant="secondary">
+      <section className="mx-auto h-screen max-w-3xl px-3 pt-12">
+        <Badge className="mb-8 text-sm [&>svg]:size-3" variant="secondary">
           100% DSGVO-konform <ShieldCheckIcon />
         </Badge>
 
-        <h1 className="motion-opacity-in-0 motion-translate-y-in-100 motion-blur-in-xs font-semibold text-5xl leading-tight tracking-tight">
+        <h1 className="text-5xl leading-tight tracking-tight">
           Von manuell zu automatisiert
           <br />– in wenigen{" "}
-          <div className="inline-flex items-center justify-center rounded-md bg-primary p-1.5 align-middle shadow-lg">
-            <SparklesIcon className="inline-block size-8 text-primary-foreground" />{" "}
+          <div className="inline-flex size-12 items-center justify-center rounded-md bg-primary/10 shadow-lg">
+            <SparklesIcon className="inline-block size-6 text-primary" />{" "}
           </div>{" "}
           Schritten
         </h1>
 
-        <p className="motion-opacity-in-0 motion-translate-y-in-100 motion-blur-in-xs motion-delay-200 mt-4 max-w-[660px] text-lg text-muted-foreground">
+        <p className="mt-4 max-w-[660px] text-lg text-muted-foreground">
           Wir verwandeln zeitraubende manuelle Abläufe in effiziente,
           automatisierte Prozesse – damit Sie sich auf ihr Kerngeschäft
           fokussieren können.
@@ -48,44 +48,43 @@ export default function Page() {
             Gespräch buchen
           </Link>
         </div>
+
+        <div className="mt-3 flex items-center gap-1">
+          <div className="size-2 animate-pulse rounded-full bg-primary" />
+          <p className="text-sm">2 Slots verfügbar</p>
+        </div>
       </section>
 
-      <section className="relative z-40 border-y border-dashed py-32">
+      <section className="border-y border-dashed py-32">
         <div className="mx-auto w-full max-w-3xl px-3">
           <div className="grid gap-8 sm:grid-cols-3">
-            <div className="motion-opacity-in-0 motion-translate-y-in-100 motion-delay-100 flex flex-col gap-3">
+            <div className="0 flex flex-col gap-3">
               <div className="flex size-12 items-center justify-center rounded-lg bg-primary/5">
                 <ZapIcon className="size-6 text-primary" />
               </div>
-              <h3 className="font-semibold text-lg tracking-tight">
-                Schnelle Umsetzung
-              </h3>
+              <h3 className="text-lg tracking-tight">Schnelle Umsetzung</h3>
               <p className="text-muted-foreground text-sm">
                 Von der Analyse bis zur Implementierung in wenigen Wochen
                 realisiert.
               </p>
             </div>
 
-            <div className="motion-opacity-in-0 motion-translate-y-in-100 motion-delay-200 flex flex-col gap-3">
+            <div className="flex flex-col gap-3">
               <div className="flex size-12 items-center justify-center rounded-lg bg-primary/5">
                 <CheckCircleIcon className="size-6 text-primary" />
               </div>
-              <h3 className="font-semibold text-lg tracking-tight">
-                Maßgeschneidert
-              </h3>
+              <h3 className="text-lg tracking-tight">Maßgeschneidert</h3>
               <p className="text-muted-foreground text-sm">
                 Jede Lösung wird individuell auf Ihre Prozesse und Anforderungen
                 angepasst.
               </p>
             </div>
 
-            <div className="motion-opacity-in-0 motion-translate-y-in-100 motion-delay-300 flex flex-col gap-3">
+            <div className="0 flex flex-col gap-3">
               <div className="flex size-12 items-center justify-center rounded-lg bg-primary/5">
                 <ClockIcon className="size-6 text-primary" />
               </div>
-              <h3 className="font-semibold text-lg tracking-tight">
-                Zeitersparnis
-              </h3>
+              <h3 className="text-lg tracking-tight">Zeitersparnis</h3>
               <p className="text-muted-foreground text-sm">
                 Automatisierung spart wertvolle Zeit für Ihr Team und Ihr
                 Unternehmen.
@@ -95,13 +94,13 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="relative scroll-mt-20 py-32" id="how-we-work">
+      <section className="py-32" id="how-we-work">
         <div className="mx-auto w-full max-w-3xl px-3">
           <div className="mb-12">
             <Badge className="mb-4" variant="secondary">
               Unser Prozess
             </Badge>
-            <h2 className="font-semibold text-3xl tracking-tight sm:text-4xl">
+            <h2 className="text-3xl tracking-tight sm:text-4xl">
               Wie wir arbeiten
             </h2>
             <p className="mt-4 text-muted-foreground">
@@ -147,9 +146,7 @@ export default function Page() {
                   </span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="mb-2 font-semibold text-xl tracking-tight">
-                    {item.title}
-                  </h3>
+                  <h3 className="mb-2 text-xl tracking-tight">{item.title}</h3>
                   <p className="text-muted-foreground">{item.description}</p>
                 </div>
               </div>
@@ -169,12 +166,12 @@ export default function Page() {
       </section>
 
       <section
-        className="relative scroll-mt-20 border-border border-t border-dashed py-24"
+        className="border-border border-t border-dashed py-24"
         id="book-a-meeting"
       >
         <div className="mx-auto w-full max-w-6xl px-3">
           <div className="mb-12 text-center">
-            <h2 className="font-semibold text-3xl tracking-tight sm:text-4xl">
+            <h2 className="text-3xl tracking-tight sm:text-4xl">
               Lassen Sie uns sprechen
             </h2>
             <p className="mt-4 text-muted-foreground">

@@ -6,7 +6,7 @@ export default function HomeLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex size-full flex-col">
+    <div className="flex size-full flex-col pt-[72px]">
       <HomeNavbar />
       {children}
     </div>

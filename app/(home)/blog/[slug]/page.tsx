@@ -12,7 +12,7 @@ export default async function Page({
   const { metadata, content } = getPostBySlug(slug);
 
   return (
-    <div className="py-32">
+    <div className="pt-12">
       <div className="mx-auto max-w-3xl px-3">
         <PostHeader metadata={metadata} />
         <Markdown content={content} />

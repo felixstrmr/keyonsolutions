@@ -1,4 +1,4 @@
-export type BlogMetadata = {
+export interface BlogMetadata {
   title: string;
   description: string;
   date: string;
@@ -11,4 +11,4 @@ export type BlogMetadata = {
     avatar: string;
     title: string;
   };
-};
+}
