@@ -1,6 +1,7 @@
 import {
   ArrowRightIcon,
   CheckCircleIcon,
+  CheckIcon,
   ClockIcon,
   ShieldCheckIcon,
   SparklesIcon,
@@ -9,7 +10,8 @@ import {
 import Link from "next/link";
 import CalEmbed from "@/components/cal-embed";
 import { Badge } from "@/components/ui/badge";
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 export default function Page() {
   return (
@@ -136,7 +138,7 @@ export default function Page() {
               },
             ].map((item, index) => (
               <div
-                className="motion-opacity-in-0 motion-translate-y-in-100 flex gap-6 border-border border-l-2 pl-6"
+                className="flex gap-6 border-border border-l-2 pl-6"
                 key={item.step}
                 style={{ animationDelay: `${(index + 1) * 100}ms` }}
               >
@@ -165,8 +167,92 @@ export default function Page() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-3xl px-3 py-32" id="pricing">
+        <div className="text-center">
+          <h1 className="text-3xl tracking-tight">
+            Einfache, transparente Preise
+          </h1>
+          <p className="mt-3 text-muted-foreground">
+            Wählen Sie das Paket, das zu Ihrem Digitalisierungstempo passt
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          {/* Pro Plan */}
+          <div className="rounded-xl bg-card p-8">
+            <div>
+              <h2 className="text-xl">Pro</h2>
+            </div>
+
+            <div className="mt-6">
+              <div className="flex items-baseline gap-2">
+                <h3 className="text-3xl tracking-tight">2.495 €</h3>
+                <span className="text-muted-foreground">/Monat</span>
+              </div>
+            </div>
+
+            <Separator className="my-6" />
+
+            <li className="flex gap-2.5">
+              <CheckIcon className="mt-0.5 size-4 shrink-0 text-primary" />
+              <span className="text-sm">10h Kontingent pro Monat</span>
+            </li>
+
+            <Button className="mt-8 w-full" variant="outline">
+              Pro wählen
+            </Button>
+          </div>
+
+          {/* Ultra Plan */}
+          <div className="relative rounded-xl border border-primary/50 bg-card p-8 shadow-[0_0_50px_rgba(190,242,100,0.025)]">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+              <span className="rounded-full bg-primary px-3 py-1 font-medium text-primary-foreground text-xs">
+                Beliebt
+              </span>
+            </div>
+
+            <div>
+              <div className="flex items-center gap-2">
+                <ZapIcon className="size-5 text-primary" />
+                <h2 className="text-xl">Ultra</h2>
+              </div>
+            </div>
+
+            <div className="mt-6">
+              <div className="flex items-baseline gap-2">
+                <h3 className="text-4xl tracking-tight">5.495 €</h3>
+                <span className="text-muted-foreground">/Monat</span>
+              </div>
+            </div>
+
+            <Separator className="my-6" />
+
+            <li className="flex gap-2.5">
+              <CheckIcon className="mt-0.5 size-4 shrink-0 text-primary" />
+              <span className="text-sm">25h Kontingent pro Monat</span>
+            </li>
+
+            <Button className="mt-8 w-full">Ultra wählen</Button>
+          </div>
+        </div>
+
+        {/* Ad-hoc Option */}
+        <div className="mt-6 rounded-xl bg-card p-8">
+          <div className="flex items-start justify-between gap-6">
+            <div className="flex-1">
+              <h2 className="text-xl">Ad-hoc & Custom</h2>
+            </div>
+            <div className="shrink-0">
+              <Button size="lg" variant="outline">
+                Kontakt aufnehmen
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section
-        className="border-border border-t border-dashed py-24"
+        className="scroll-mt-32 border-border border-t border-dashed py-24"
         id="book-a-meeting"
       >
         <div className="mx-auto w-full max-w-6xl px-3">

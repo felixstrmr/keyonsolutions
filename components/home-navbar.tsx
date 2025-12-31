@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 const NAV_ITEMS = [
   { name: "Prozess", href: "/#how-we-work" },
   { name: "Blog", href: "/blog" },
-  { name: "Preise", href: "/pricing" },
+  { name: "Preise", href: "/#pricing" },
   { name: "Kontakt", href: "/contact" },
 ] as const;
 
@@ -57,7 +57,7 @@ export default function HomeNavbar() {
           className={buttonVariants({
             variant: pathname !== "/" ? "default" : "secondary",
           })}
-          href="#book-a-meeting"
+          href="/#book-a-meeting"
         >
           Jetzt buchen
         </Link>
