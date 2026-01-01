@@ -7,12 +7,12 @@ import {
   ZapIcon,
 } from "lucide-react";
 import Link from "next/link";
-import CalEmbed from "@/components/cal-embed";
 import { Badge } from "@/components/ui/badge";
 import { Button, buttonVariants } from "@/components/ui/button";
 import DarkVeil from "@/components/ui/dark-veil";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils";
 
 export default function Page() {
   return (
@@ -24,13 +24,16 @@ export default function Page() {
         speed={1}
       />
       <section className="relative z-40 mx-auto max-w-3xl px-3 pt-24 pb-32">
-        <Badge className="mb-8 text-sm [&>svg]:size-3" variant="secondary">
+        <Badge
+          className="mb-8 bg-background/50 text-sm backdrop-blur-sm [&>svg]:size-3"
+          variant="secondary"
+        >
           100% DSGVO-konform <ShieldCheckIcon />
         </Badge>
 
         <h1 className="motion-opacity-in-0 motion-translate-y-in-100 motion-blur-in-md text-5xl leading-tight tracking-tight">
           Von manuell zu automatisiert
-          <br />– in wenigen{" "}
+          <br />― in wenigen{" "}
           <div className="inline-flex size-12 items-center justify-center rounded-sm bg-primary/10 shadow-lg">
             <SparklesIcon className="inline-block size-6 text-primary" />{" "}
           </div>{" "}
@@ -121,15 +124,15 @@ export default function Page() {
             {[
               {
                 step: "01",
-                title: "Erstgespräch & Analyse",
+                title: "Abo wählen & starten",
                 description:
-                  "In einem kostenlosen Erstgespräch lernen wir Ihre Prozesse kennen und identifizieren erste Optimierungspotenziale.",
+                  "Sie wählen ein passendes Stundenpaket und starten Ihr Abonnement. Monatlich kündbar, keine Vertragsbindung.",
               },
               {
                 step: "02",
-                title: "Abo wählen & starten",
+                title: "Erstgespräch & Analyse",
                 description:
-                  "Sie wählen ein passendes Stundenpaket und wir beginnen sofort mit der Umsetzung der wichtigsten Maßnahmen.",
+                  "In den ersten Stunden analysieren wir gemeinsam Ihre Prozesse und identifizieren die wichtigsten Optimierungspotenziale.",
               },
               {
                 step: "03",
@@ -215,9 +218,16 @@ export default function Page() {
                 </li>
               </ul>
 
-              <Button className="w-full" variant="outline">
+              <Link
+                className={cn(
+                  buttonVariants({ variant: "outline" }),
+                  "mt-8 w-full"
+                )}
+                href={"https://buy.stripe.com/test_3cI5kDam5bcHbcb6k32Fa01"}
+                target="_blank"
+              >
                 Pro wählen
-              </Button>
+              </Link>
             </div>
           </div>
 
@@ -271,7 +281,16 @@ export default function Page() {
               </li>
             </ul>
 
-            <Button className="mt-8 w-full">Ultra wählen</Button>
+            <Link
+              className={cn(
+                buttonVariants({ variant: "default" }),
+                "mt-8 w-full"
+              )}
+              href={"https://buy.stripe.com/test_00wfZh8dX0y3fsr4bV2Fa00"}
+              target="_blank"
+            >
+              Ultra wählen
+            </Link>
           </div>
         </div>
 
@@ -291,24 +310,6 @@ export default function Page() {
               </Button>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section
-        className="scroll-mt-32 border-border border-t border-dashed py-24"
-        id="book-a-meeting"
-      >
-        <div className="mx-auto w-full max-w-6xl px-3">
-          <div className="mb-12 text-center">
-            <h2 className="text-3xl tracking-tight sm:text-4xl">
-              Kostenloses Erstgespräch
-            </h2>
-            <p className="mx-auto mt-4 max-w-[660px] text-muted-foreground">
-              In 30 Minuten analysieren wir Ihre Prozesse und zeigen Ihnen
-              konkrete Optimierungspotenziale – unverbindlich und kostenlos.
-            </p>
-          </div>
-          <CalEmbed />
         </div>
       </section>
     </div>
