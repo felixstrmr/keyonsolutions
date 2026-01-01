@@ -1,5 +1,4 @@
 import {
-  ArrowRightIcon,
   CheckCircleIcon,
   CheckIcon,
   ClockIcon,
@@ -11,32 +10,40 @@ import Link from "next/link";
 import CalEmbed from "@/components/cal-embed";
 import { Badge } from "@/components/ui/badge";
 import { Button, buttonVariants } from "@/components/ui/button";
+import DarkVeil from "@/components/ui/dark-veil";
+import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import { Separator } from "@/components/ui/separator";
 
 export default function Page() {
   return (
-    <div className="size-full">
-      <section className="mx-auto h-screen max-w-3xl px-3 pt-12">
+    <div className="relative size-full">
+      <ProgressiveBlur height="5%" />
+      <DarkVeil
+        className="-mt-12 max-h-1/2 opacity-25 mix-blend-lighten"
+        color="#BEF264"
+        speed={1}
+      />
+      <section className="relative z-40 mx-auto max-w-3xl px-3 pt-24 pb-32">
         <Badge className="mb-8 text-sm [&>svg]:size-3" variant="secondary">
           100% DSGVO-konform <ShieldCheckIcon />
         </Badge>
 
-        <h1 className="text-5xl leading-tight tracking-tight">
+        <h1 className="motion-opacity-in-0 motion-translate-y-in-100 motion-blur-in-md text-5xl leading-tight tracking-tight">
           Von manuell zu automatisiert
           <br />– in wenigen{" "}
-          <div className="inline-flex size-12 items-center justify-center rounded-md bg-primary/10 shadow-lg">
+          <div className="inline-flex size-12 items-center justify-center rounded-sm bg-primary/10 shadow-lg">
             <SparklesIcon className="inline-block size-6 text-primary" />{" "}
           </div>{" "}
           Schritten
         </h1>
 
-        <p className="mt-4 max-w-[660px] text-lg text-muted-foreground">
+        <p className="motion-opacity-in-0 motion-translate-y-in-100 motion-blur-in-sm motion-delay-200 mt-4 max-w-[660px] text-lg text-muted-foreground">
           Wir verwandeln zeitraubende manuelle Abläufe in effiziente,
           automatisierte Prozesse – damit Sie sich auf ihr Kerngeschäft
           fokussieren können.
         </p>
 
-        <div className="mt-8 flex gap-2">
+        <div className="motion-opacity-in-0 motion-translate-y-in-100 motion-blur-in-sm motion-delay-300 mt-8 flex gap-2">
           <Link
             className={buttonVariants({ variant: "secondary", size: "lg" })}
             href="#"
@@ -51,7 +58,7 @@ export default function Page() {
           </Link>
         </div>
 
-        <div className="mt-3 flex items-center gap-1">
+        <div className="motion-opacity-in-0 motion-translate-y-in-100 motion-blur-in-sm motion-delay-400 mt-3 flex items-center gap-1">
           <div className="size-2 animate-pulse rounded-full bg-primary" />
           <p className="text-sm">2 Slots verfügbar</p>
         </div>
@@ -102,9 +109,7 @@ export default function Page() {
             <Badge className="mb-4" variant="secondary">
               Unser Prozess
             </Badge>
-            <h2 className="text-3xl tracking-tight sm:text-4xl">
-              Wie wir arbeiten
-            </h2>
+            <h2 className="text-3xl tracking-tight sm:text-4xl">Der Prozess</h2>
             <p className="mt-4 text-muted-foreground">
               Ein strukturierter Ansatz für nachhaltige Lösungen
             </p>
@@ -153,16 +158,6 @@ export default function Page() {
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="mt-12">
-            <Link
-              className={buttonVariants({ variant: "default", size: "lg" })}
-              href="#book-a-meeting"
-            >
-              Jetzt starten
-              <ArrowRightIcon className="size-4" />
-            </Link>
           </div>
         </div>
       </section>
