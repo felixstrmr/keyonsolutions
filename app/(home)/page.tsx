@@ -46,15 +46,15 @@ export default function Page() {
         <div className="motion-opacity-in-0 motion-translate-y-in-100 motion-blur-in-sm motion-delay-300 mt-8 flex gap-2">
           <Link
             className={buttonVariants({ variant: "secondary", size: "lg" })}
-            href="#"
+            href="#subscription-model"
           >
-            Wie wir arbeiten
+            Abo-Modell kennenlernen
           </Link>
           <Link
             className={buttonVariants({ variant: "default", size: "lg" })}
             href="#book-a-meeting"
           >
-            Gespräch buchen
+            Erstgespräch buchen
           </Link>
         </div>
 
@@ -71,10 +71,10 @@ export default function Page() {
               <div className="flex size-12 items-center justify-center rounded-lg bg-primary/5">
                 <ZapIcon className="size-6 text-primary" />
               </div>
-              <h3 className="text-lg tracking-tight">Schnelle Umsetzung</h3>
+              <h3 className="text-lg tracking-tight">Flexibel & planbar</h3>
               <p className="text-muted-foreground text-sm">
-                Von der Analyse bis zur Implementierung in wenigen Wochen
-                realisiert.
+                Monatlich kündbar, keine Vertragslaufzeit. Sie zahlen nur für
+                die Zeit, die Sie nutzen.
               </p>
             </div>
 
@@ -82,10 +82,10 @@ export default function Page() {
               <div className="flex size-12 items-center justify-center rounded-lg bg-primary/5">
                 <CheckCircleIcon className="size-6 text-primary" />
               </div>
-              <h3 className="text-lg tracking-tight">Maßgeschneidert</h3>
+              <h3 className="text-lg tracking-tight">Kontinuierlich</h3>
               <p className="text-muted-foreground text-sm">
-                Jede Lösung wird individuell auf Ihre Prozesse und Anforderungen
-                angepasst.
+                Statt eines großen Projekts optimieren wir Ihre Prozesse Schritt
+                für Schritt, Monat für Monat.
               </p>
             </div>
 
@@ -93,25 +93,27 @@ export default function Page() {
               <div className="flex size-12 items-center justify-center rounded-lg bg-primary/5">
                 <ClockIcon className="size-6 text-primary" />
               </div>
-              <h3 className="text-lg tracking-tight">Zeitersparnis</h3>
+              <h3 className="text-lg tracking-tight">Zeitkontingent</h3>
               <p className="text-muted-foreground text-sm">
-                Automatisierung spart wertvolle Zeit für Ihr Team und Ihr
-                Unternehmen.
+                Ihr monatliches Stundenkontingent wird transparent erfasst und
+                kann flexibel eingesetzt werden.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-32" id="how-we-work">
+      <section className="py-32" id="subscription-model">
         <div className="mx-auto w-full max-w-3xl px-3">
           <div className="mb-12">
             <Badge className="mb-4" variant="secondary">
-              Unser Prozess
+              Das Abo-Modell
             </Badge>
-            <h2 className="text-3xl tracking-tight sm:text-4xl">Der Prozess</h2>
+            <h2 className="text-3xl tracking-tight sm:text-4xl">
+              So funktioniert's
+            </h2>
             <p className="mt-4 text-muted-foreground">
-              Ein strukturierter Ansatz für nachhaltige Lösungen
+              Kontinuierliche Optimierung statt großer Einmalprojekte
             </p>
           </div>
 
@@ -119,27 +121,27 @@ export default function Page() {
             {[
               {
                 step: "01",
-                title: "Analyse & Beratung",
+                title: "Erstgespräch & Analyse",
                 description:
-                  "Wir analysieren Ihre aktuellen Prozesse und identifizieren Automatisierungspotenziale gemeinsam mit Ihnen.",
+                  "In einem kostenlosen Erstgespräch lernen wir Ihre Prozesse kennen und identifizieren erste Optimierungspotenziale.",
               },
               {
                 step: "02",
-                title: "Konzeption & Planung",
+                title: "Abo wählen & starten",
                 description:
-                  "Basierend auf der Analyse entwickeln wir ein maßgeschneidertes Konzept für Ihre Automatisierungslösung.",
+                  "Sie wählen ein passendes Stundenpaket und wir beginnen sofort mit der Umsetzung der wichtigsten Maßnahmen.",
               },
               {
                 step: "03",
-                title: "Umsetzung & Integration",
+                title: "Monatliche Umsetzung",
                 description:
-                  "Wir implementieren die Lösung und integrieren sie nahtlos in Ihre bestehenden Systeme und Workflows.",
+                  "Jeden Monat arbeiten wir kontinuierlich an Ihren Prozessen – mit transparenter Zeiterfassung und regelmäßigen Updates.",
               },
               {
                 step: "04",
-                title: "Optimierung & Support",
+                title: "Flexibel anpassen",
                 description:
-                  "Nach der Implementierung optimieren wir kontinuierlich und bieten langfristigen Support für Ihre Lösung.",
+                  "Sie können jederzeit Ihr Paket wechseln, pausieren oder kündigen. Keine versteckten Kosten, keine Vertragsbindung.",
               },
             ].map((item, index) => (
               <div
@@ -168,15 +170,18 @@ export default function Page() {
             Einfache, transparente Preise
           </h1>
           <p className="mt-3 text-muted-foreground">
-            Wählen Sie das Paket, das zu Ihrem Digitalisierungstempo passt
+            Monatlich kündbar – wählen Sie das Paket, das zu Ihrem Tempo passt
           </p>
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {/* Pro Plan */}
-          <div className="rounded-xl bg-card p-8">
+          <div className="flex flex-col rounded-xl bg-card p-8">
             <div>
               <h2 className="text-xl">Pro</h2>
+              <p className="mt-2 text-muted-foreground text-sm">
+                Für kontinuierliche Optimierung
+              </p>
             </div>
 
             <div className="mt-6">
@@ -188,14 +193,32 @@ export default function Page() {
 
             <Separator className="my-6" />
 
-            <li className="flex gap-2.5">
-              <CheckIcon className="mt-0.5 size-4 shrink-0 text-primary" />
-              <span className="text-sm">10h Kontingent pro Monat</span>
-            </li>
+            <div className="flex h-full flex-col justify-between">
+              <ul className="space-y-3">
+                <li className="flex gap-2.5">
+                  <CheckIcon className="mt-0.5 size-4 shrink-0 text-primary" />
+                  <span className="text-sm">
+                    10 Stunden Kontingent pro Monat
+                  </span>
+                </li>
+                <li className="flex gap-2.5">
+                  <CheckIcon className="mt-0.5 size-4 shrink-0 text-primary" />
+                  <span className="text-sm">Monatlich kündbar</span>
+                </li>
+                <li className="flex gap-2.5">
+                  <CheckIcon className="mt-0.5 size-4 shrink-0 text-primary" />
+                  <span className="text-sm">Transparente Zeiterfassung</span>
+                </li>
+                <li className="flex gap-2.5">
+                  <CheckIcon className="mt-0.5 size-4 shrink-0 text-primary" />
+                  <span className="text-sm">Remote-Support</span>
+                </li>
+              </ul>
 
-            <Button className="mt-8 w-full" variant="outline">
-              Pro wählen
-            </Button>
+              <Button className="w-full" variant="outline">
+                Pro wählen
+              </Button>
+            </div>
           </div>
 
           {/* Ultra Plan */}
@@ -211,6 +234,9 @@ export default function Page() {
                 <ZapIcon className="size-5 text-primary" />
                 <h2 className="text-xl">Ultra</h2>
               </div>
+              <p className="mt-2 text-muted-foreground text-sm">
+                Für schnelle Digitalisierung
+              </p>
             </div>
 
             <div className="mt-6">
@@ -222,10 +248,28 @@ export default function Page() {
 
             <Separator className="my-6" />
 
-            <li className="flex gap-2.5">
-              <CheckIcon className="mt-0.5 size-4 shrink-0 text-primary" />
-              <span className="text-sm">25h Kontingent pro Monat</span>
-            </li>
+            <ul className="space-y-3">
+              <li className="flex gap-2.5">
+                <CheckIcon className="mt-0.5 size-4 shrink-0 text-primary" />
+                <span className="text-sm">25 Stunden Kontingent pro Monat</span>
+              </li>
+              <li className="flex gap-2.5">
+                <CheckIcon className="mt-0.5 size-4 shrink-0 text-primary" />
+                <span className="text-sm">Monatlich kündbar</span>
+              </li>
+              <li className="flex gap-2.5">
+                <CheckIcon className="mt-0.5 size-4 shrink-0 text-primary" />
+                <span className="text-sm">Transparente Zeiterfassung</span>
+              </li>
+              <li className="flex gap-2.5">
+                <CheckIcon className="mt-0.5 size-4 shrink-0 text-primary" />
+                <span className="text-sm">Priorisierter Support</span>
+              </li>
+              <li className="flex gap-2.5">
+                <CheckIcon className="mt-0.5 size-4 shrink-0 text-primary" />
+                <span className="text-sm">Vor-Ort-Termine möglich</span>
+              </li>
+            </ul>
 
             <Button className="mt-8 w-full">Ultra wählen</Button>
           </div>
@@ -233,9 +277,13 @@ export default function Page() {
 
         {/* Ad-hoc Option */}
         <div className="mt-6 rounded-xl bg-card p-8">
-          <div className="flex items-start justify-between gap-6">
+          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
             <div className="flex-1">
-              <h2 className="text-xl">Ad-hoc & Custom</h2>
+              <h2 className="text-xl">Einmalige Projekte</h2>
+              <p className="mt-2 text-muted-foreground text-sm">
+                Sie benötigen nur eine einmalige Optimierung oder haben ein
+                spezifisches Projekt?
+              </p>
             </div>
             <div className="shrink-0">
               <Button size="lg" variant="outline">
@@ -253,11 +301,11 @@ export default function Page() {
         <div className="mx-auto w-full max-w-6xl px-3">
           <div className="mb-12 text-center">
             <h2 className="text-3xl tracking-tight sm:text-4xl">
-              Lassen Sie uns sprechen
+              Kostenloses Erstgespräch
             </h2>
-            <p className="mt-4 text-muted-foreground">
-              Buchen Sie ein kostenloses Beratungsgespräch und erfahren Sie, wie
-              wir Ihre Prozesse optimieren können.
+            <p className="mx-auto mt-4 max-w-[660px] text-muted-foreground">
+              In 30 Minuten analysieren wir Ihre Prozesse und zeigen Ihnen
+              konkrete Optimierungspotenziale – unverbindlich und kostenlos.
             </p>
           </div>
           <CalEmbed />
