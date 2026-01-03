@@ -7,6 +7,7 @@ import {
   ZapIcon,
 } from "lucide-react";
 import Link from "next/link";
+import CalEmbed from "@/components/cal-embed";
 import { Badge } from "@/components/ui/badge";
 import { Button, buttonVariants } from "@/components/ui/button";
 import DarkVeil from "@/components/ui/dark-veil";
@@ -55,7 +56,7 @@ export default function Page() {
           </Link>
           <Link
             className={buttonVariants({ variant: "default", size: "lg" })}
-            href="#book-a-meeting"
+            href="/#book-a-call"
           >
             Erstgespräch buchen
           </Link>
@@ -310,6 +311,16 @@ export default function Page() {
               </Button>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-32" id="book-a-call">
+        <div className="mx-auto w-full max-w-3xl px-3 text-center">
+          <h2 className="text-3xl tracking-tight">Buche ein Erstgespräch</h2>
+          <p className="mt-3 text-muted-foreground" />
+        </div>
+        <div className="mt-12">
+          <CalEmbed />
         </div>
       </section>
     </div>

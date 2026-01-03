@@ -12,7 +12,7 @@ const NAV_ITEMS = [
   { name: "Prozess", href: "/#how-we-work" },
   { name: "Blog", href: "/blog" },
   { name: "Preise", href: "/#pricing" },
-  { name: "Kontakt", href: "/contact" },
+  { name: "Kontakt", href: "/#book-a-call" },
 ] as const;
 
 export default function HomeNavbar() {
@@ -57,7 +57,7 @@ export default function HomeNavbar() {
           className={buttonVariants({
             variant: pathname !== "/" ? "default" : "secondary",
           })}
-          href="/#book-a-meeting"
+          href="/#book-a-call"
         >
           Jetzt buchen
         </Link>
