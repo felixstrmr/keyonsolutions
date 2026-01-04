@@ -3,11 +3,11 @@ import {
   CheckIcon,
   ClockIcon,
   ShieldCheckIcon,
-  SparklesIcon,
   ZapIcon,
 } from "lucide-react";
 import Link from "next/link";
 import CalEmbed from "@/components/cal-embed";
+import { KeyonSolutionsIcon } from "@/components/icons";
 import { Badge } from "@/components/ui/badge";
 import { Button, buttonVariants } from "@/components/ui/button";
 import DarkVeil from "@/components/ui/dark-veil";
@@ -26,7 +26,7 @@ export default function Page() {
       />
       <section className="relative z-40 mx-auto max-w-3xl px-3 pt-24 pb-32">
         <Badge
-          className="mb-8 bg-background/50 text-sm backdrop-blur-sm [&>svg]:size-3"
+          className="mb-8 bg-background/50 text-sm backdrop-blur-sm [&>svg]:size-3.5"
           variant="secondary"
         >
           100% DSGVO-konform <ShieldCheckIcon />
@@ -35,8 +35,8 @@ export default function Page() {
         <h1 className="motion-opacity-in-0 motion-translate-y-in-100 motion-blur-in-md text-5xl leading-tight tracking-tight">
           Von manuell zu automatisiert
           <br />― in wenigen{" "}
-          <div className="inline-flex size-12 items-center justify-center rounded-sm bg-primary/10 shadow-lg">
-            <SparklesIcon className="inline-block size-6 text-primary" />{" "}
+          <div className="inline-flex items-center justify-center rounded-sm bg-primary p-3 shadow-lg">
+            <KeyonSolutionsIcon className="inline-block h-6 w-auto text-primary-foreground" />{" "}
           </div>{" "}
           Schritten
         </h1>
