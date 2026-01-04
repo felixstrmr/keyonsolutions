@@ -1,10 +1,4 @@
-import {
-  CheckCircleIcon,
-  CheckIcon,
-  ClockIcon,
-  ShieldCheckIcon,
-  ZapIcon,
-} from "lucide-react";
+import { CheckIcon, ShieldCheckIcon, ZapIcon } from "lucide-react";
 import Link from "next/link";
 import CalEmbed from "@/components/cal-embed";
 import { KeyonSolutionsIcon } from "@/components/icons";
@@ -70,38 +64,34 @@ export default function Page() {
 
       <section className="border-y border-dashed py-32">
         <div className="mx-auto w-full max-w-3xl px-3">
-          <div className="grid gap-8 sm:grid-cols-3">
-            <div className="0 flex flex-col gap-3">
-              <div className="flex size-12 items-center justify-center rounded-lg bg-primary/5">
-                <ZapIcon className="size-6 text-primary" />
-              </div>
-              <h3 className="text-lg tracking-tight">Flexibel & planbar</h3>
-              <p className="text-muted-foreground text-sm">
-                Monatlich kündbar, keine Vertragslaufzeit. Sie zahlen nur für
-                die Zeit, die Sie nutzen.
-              </p>
-            </div>
+          <div className="mb-12 text-center">
+            <Badge className="mb-4" variant="secondary">
+              Unsere Services
+            </Badge>
+            <h2 className="text-3xl tracking-tight sm:text-4xl">
+              Unsere Services
+            </h2>
+          </div>
 
-            <div className="flex flex-col gap-3">
-              <div className="flex size-12 items-center justify-center rounded-lg bg-primary/5">
-                <CheckCircleIcon className="size-6 text-primary" />
+          <div className="grid grid-rows-2 gap-3">
+            <div className="grid grid-cols-2 gap-3">
+              <div className="rounded-xl bg-card p-6">
+                <h3>Workflow Automatisierung</h3>
               </div>
-              <h3 className="text-lg tracking-tight">Kontinuierlich</h3>
-              <p className="text-muted-foreground text-sm">
-                Statt eines großen Projekts optimieren wir Ihre Prozesse Schritt
-                für Schritt, Monat für Monat.
-              </p>
+              <div className="rounded-xl bg-card p-6">
+                <h3>Workflow Automatisierung</h3>
+              </div>
             </div>
-
-            <div className="0 flex flex-col gap-3">
-              <div className="flex size-12 items-center justify-center rounded-lg bg-primary/5">
-                <ClockIcon className="size-6 text-primary" />
+            <div className="grid grid-cols-3 gap-3">
+              <div className="rounded-xl bg-card p-6">
+                <h3>Workflow Automatisierung</h3>
               </div>
-              <h3 className="text-lg tracking-tight">Zeitkontingent</h3>
-              <p className="text-muted-foreground text-sm">
-                Ihr monatliches Stundenkontingent wird transparent erfasst und
-                kann flexibel eingesetzt werden.
-              </p>
+              <div className="rounded-xl bg-card p-6">
+                <h3>Workflow Automatisierung</h3>
+              </div>
+              <div className="rounded-xl bg-card p-6">
+                <h3>Workflow Automatisierung</h3>
+              </div>
             </div>
           </div>
         </div>
