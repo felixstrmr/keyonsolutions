@@ -33,7 +33,7 @@ export default function PostHeader({ metadata }: { metadata: BlogMetadata }) {
         </div>
       </div>
       <h1 className="mt-6 mb-3 text-3xl tracking-tight">{title}</h1>
-      <p>{description}</p>
+      <p className="text-neutral-300/75">{description}</p>
       <div className="mt-6 mb-6 flex items-center gap-3 text-muted-foreground text-sm">
         <Tooltip>
           <TooltipTrigger>
@@ -45,9 +45,8 @@ export default function PostHeader({ metadata }: { metadata: BlogMetadata }) {
               width={28}
             />
           </TooltipTrigger>
-          <TooltipContent side="bottom">
+          <TooltipContent className="w-fit" side="bottom">
             <p>{author.name}</p>
-            <p className="text-muted-foreground">{author.title}</p>
           </TooltipContent>
         </Tooltip>
         <p>{format(date, "PP", { locale: de })}</p>

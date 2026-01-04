@@ -20,7 +20,7 @@ export default function Page() {
     <div className="relative size-full">
       <ProgressiveBlur height="5%" />
       <DarkVeil
-        className="-mt-12 max-h-1/2 opacity-25 mix-blend-lighten"
+        className="-mt-12 max-h-1/2 opacity-40"
         color="#BEF264"
         speed={1}
       />

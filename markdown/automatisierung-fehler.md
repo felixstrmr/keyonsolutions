@@ -7,7 +7,7 @@ minRead: 5
 tags: ["Guides", "Prozesse"]
 isFeatured: false
 author:
-  name: Felix Strohmeier
+  name: "Felix Strohmeier"
   title: Gründer Keyon Solutions
   avatar: "/blog/authors/fs.jpg"
 ---

@@ -21,7 +21,7 @@ export default function HomeNavbar() {
   return (
     <div className="fixed top-0 right-0 left-0 z-50">
       <StripedPattern className="pointer-events-none -z-50 h-10.5 w-full border-b border-dashed bg-background text-border" />
-      <div className="absolute top-2 right-0 left-0 mx-auto flex h-16 max-w-3xl items-center justify-between rounded-xl bg-background/75 px-3 shadow-lg backdrop-blur-sm">
+      <div className="absolute top-2 right-0 left-0 mx-auto flex h-16 max-w-3xl items-center justify-between rounded-xl border border-muted/50 bg-background/75 px-3 shadow-lg backdrop-blur-sm">
         <div className="flex items-center gap-3">
           <Link
             aria-label="Home"

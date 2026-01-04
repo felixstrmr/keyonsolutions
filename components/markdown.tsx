@@ -19,7 +19,7 @@ export default function Markdown({ content }: { content: string }) {
           <h4 className="mb-3 text-base tracking-tight">{children}</h4>
         ),
         p: ({ children }) => (
-          <p className="mb-3 text-base text-neutral-300">{children}</p>
+          <p className="mb-3 text-base text-neutral-300/75">{children}</p>
         ),
         br: () => <br />,
       }}
